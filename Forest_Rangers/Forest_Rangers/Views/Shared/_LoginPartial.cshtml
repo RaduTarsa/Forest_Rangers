@@ -8,6 +8,7 @@
 @if (SignInManager.IsSignedIn(User))
 {
     <li class="nav-item">
+        @*<a id="manage" class="nav-link text-light" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"><h4><span class="badge badge-light">@UserManager.GetUserAsync(User).Result.FirstName</span></h4></a>*@
         <a id="manage" class="nav-link text-light" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"><h4><span class="badge badge-light">@UserManager.GetUserAsync(User).Result.FirstName</span></h4></a>
     </li>
     <li class="nav-item">
