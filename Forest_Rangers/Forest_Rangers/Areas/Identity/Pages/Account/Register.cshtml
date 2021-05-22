@@ -1,0 +1,85 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+@*<h1>@ViewData["Title"]</h1>*@
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="~/css/auth.css" />
+
+<div class="signup-form">
+    <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
+        <h2>Register</h2>
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <span class="fa fa-user-circle"></span>
+                    </span>
+                </div>
+                <input for="Input.FirstName" class="form-control" placeholder="First Name" />
+                <span for="Input.FirstName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <span class="fa fa-user-circle-o"></span>
+                    </span>
+                </div>
+                <input for="Input.LastName" class="form-control" placeholder="Last Name" />
+                <span for="Input.LastName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <em class="fa fa-paper-plane"></em>
+                    </span>
+                </div>
+                <input asp-for="Input.Email" class="form-control" placeholder="Email Address" />
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <em class="fa fa-unlock"></em>
+                    </span>
+                </div>
+                <input asp-for="Input.Password" class="form-control" placeholder="Password" />
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <em class="fa fa-unlock"></em>
+                    </span>
+                </div>
+                <input asp-for="Input.ConfirmPassword" class="form-control" placeholder="Confirm Password" />
+                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-success btn-lg btn-block">Register</button>
+        </div>
+        <div class="form-group">
+            <p>
+                <a asp-page="./Login" asp-route-returnUrl="@Model.ReturnUrl">Log in as registered user</a>
+            </p>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

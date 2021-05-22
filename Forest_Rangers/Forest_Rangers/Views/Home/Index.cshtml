@@ -1,8 +1,49 @@
-﻿@{
+﻿@model IEnumerable<Forest_Rangers.Models.Post>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4 bg-light pb-2">Posts</h1>
 </div>
+
+<div class="row text-center">
+    @foreach (var item in Model)
+    {
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+                @if(item.ImagePath != null)
+                {
+                        <img class="card-img" src="@Url.Content(string.Format("~/PostImages/{0}.jpg", item.Id))" alt="post-image">
+                }
+                else
+                {
+                    <img class="card-img" src="@Url.Content("~/HelperImages/no-post.jpg")" alt="no-post-image">
+                }
+                <div class="card-body">
+                    <h4 class="card-title">@Html.DisplayFor(modelItem => item.Title)</h4>
+                    <p class="card-text">@Html.DisplayFor(modelItem => item.Description)</p>
+                    @*<p class="card-text"><span class="font-weight-bold">Coordinates:</span> @Html.DisplayFor(modelItem => item.CoordinatesLong) | @Html.DisplayFor(modelItem => item.CoordinatesLat)</p>*@
+                    <hr />
+                    <p><span class="font-weight-bold">Added by:</span> @Html.DisplayFor(modelItem => item.Forest_RangersUser.FirstName) @Html.DisplayFor(modelItem => item.Forest_RangersUser.LastName)</p>
+                    <p><span class="font-weight-bold">Created at:</span> @Html.DisplayFor(modelItem => item.Created_at) </p>
+                    <p><span class="font-weight-bold">Updated at:</span> @Html.DisplayFor(modelItem => item.Updated_at)</p>
+                </div>
+                <div class="card-footer">
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary">Details</a>
+                    @if (Convert.ToString(item.Forest_RangersUser.Id) == Convert.ToString(ViewData["userId"]))
+                    {
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-info">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                    }
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+
+
+    
+    

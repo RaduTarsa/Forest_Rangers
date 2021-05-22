@@ -1,0 +1,79 @@
+﻿@model Forest_Rangers.Models.Post
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="@Url.Content("~/scripts/maps.js")"></script>
+
+<div class="row">
+    <div class="col-md-3 justify-content-center align-self-center">
+        <a asp-action="Index" class="btn btn-outline-primary">Back to List</a>
+    </div>
+    <div class="col-md-6">
+        <h1 class="text-center">Edit</h1>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+<hr />
+<div class="row">
+    <div class="col-md-6 card pt-2">
+        <form asp-action="Edit" EncType="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImagePath" class="control-label">Image</label>
+                <input runat="server" type="file" asp-for="ImagePath" class="form-control" asp-id="ImagePath" />
+                <span asp-validation-for="ImagePath" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CoordinatesLong" class="control-label"></label>
+                <input asp-for="CoordinatesLong" class="form-control" id="long" />
+                <span asp-validation-for="CoordinatesLong" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CoordinatesLat" class="control-label"></label>
+                <input asp-for="CoordinatesLat" class="form-control" id="lat" />
+                <span asp-validation-for="CoordinatesLat" class="text-danger"></span>
+            </div>
+            <div class="form-group" hidden>
+                <label asp-for="Created_at" class="control-label"></label>
+                <input asp-for="Created_at" class="form-control" />
+                <span asp-validation-for="Created_at" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+            <label asp-for="Updated_at" class="control-label"></label>
+            <input asp-for="Updated_at" class="form-control" />
+            <span asp-validation-for="Updated_at" class="text-danger"></span>
+        </div>*@
+            <div class="form-group" hidden>
+                <label asp-for="Forest_RangersUserId" class="control-label"></label>
+                <select asp-for="Forest_RangersUserId" class="form-control" asp-items="ViewBag.ApplicationUserId"></select>
+                <span asp-validation-for="Forest_RangersUserId" class="text-danger"></span>
+            </div>
+            <div class="form-group d-flex justify-content-between">
+                <button name="gps-button" class="btn btn-info w-25" type="button" onclick="setGPSCoords()">GPS</button>
+                <input runat="server" type="submit" value="Save" class="btn btn-primary w-50 justify-content-end" />
+            </div>
+        </form>
+    </div>
+    <div class="col-md-6" style="min-height: 400px;">
+        <div id="map" style="width:100%; height: 100%;"></div>
+    </div>
+</div>
+
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }

@@ -1,0 +1,139 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Forest_Rangers
+build_property.RootNamespace = Forest_Rangers
+build_property.ProjectDir = C:\Users\Subaru\source\repos\Forest_Rangers\Forest_Rangers\
+build_property.RazorLangVersion = 5.0
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Subaru\source\repos\Forest_Rangers\Forest_Rangers
+build_property._RazorSourceGeneratorDebug = 
+build_property._RazorSourceGeneratorLog = 
+
+[c:/Users/Subaru/source/repos/Forest_Rangers/Forest_Rangers/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Areas\Identity\Pages\Account\Login.cshtml
+build_metadata.AdditionalFiles.GeneratedOutputFullPath = C:\Users\Subaru\source\repos\Forest_Rangers\Forest_Rangers\obj\Debug\net6.0\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Subaru/source/repos/Forest_Rangers/Forest_Rangers/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Areas\Identity\Pages\Account\Register.cshtml
+build_metadata.AdditionalFiles.GeneratedOutputFullPath = C:\Users\Subaru\source\repos\Forest_Rangers\Forest_Rangers\obj\Debug\net6.0\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Subaru/source/repos/Forest_Rangers/Forest_Rangers/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Areas\Identity\Pages\Account\_ViewImports.cshtml
+build_metadata.AdditionalFiles.GeneratedOutputFullPath = C:\Users\Subaru\source\repos\Forest_Rangers\Forest_Rangers\obj\Debug\net6.0\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Subaru/source/repos/Forest_Rangers/Forest_Rangers/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Areas\Identity\Pages\_ValidationScriptsPartial.cshtml
+build_metadata.AdditionalFiles.GeneratedOutputFullPath = C:\Users\Subaru\source\repos\Forest_Rangers\Forest_Rangers\obj\Debug\net6.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Subaru/source/repos/Forest_Rangers/Forest_Rangers/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Areas\Identity\Pages\_ViewImports.cshtml
+build_metadata.AdditionalFiles.GeneratedOutputFullPath = C:\Users\Subaru\source\repos\Forest_Rangers\Forest_Rangers\obj\Debug\net6.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Subaru/source/repos/Forest_Rangers/Forest_Rangers/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Areas\Identity\Pages\_ViewStart.cshtml
+build_metadata.AdditionalFiles.GeneratedOutputFullPath = C:\Users\Subaru\source\repos\Forest_Rangers\Forest_Rangers\obj\Debug\net6.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Subaru/source/repos/Forest_Rangers/Forest_Rangers/Views/Comments/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Views\Comments\Create.cshtml
+build_metadata.AdditionalFiles.GeneratedOutputFullPath = C:\Users\Subaru\source\repos\Forest_Rangers\Forest_Rangers\obj\Debug\net6.0\Razor\Views\Comments\Create.cshtml.g.cs
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Subaru/source/repos/Forest_Rangers/Forest_Rangers/Views/Comments/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Views\Comments\Delete.cshtml
+build_metadata.AdditionalFiles.GeneratedOutputFullPath = C:\Users\Subaru\source\repos\Forest_Rangers\Forest_Rangers\obj\Debug\net6.0\Razor\Views\Comments\Delete.cshtml.g.cs
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Subaru/source/repos/Forest_Rangers/Forest_Rangers/Views/Comments/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Views\Comments\Details.cshtml
+build_metadata.AdditionalFiles.GeneratedOutputFullPath = C:\Users\Subaru\source\repos\Forest_Rangers\Forest_Rangers\obj\Debug\net6.0\Razor\Views\Comments\Details.cshtml.g.cs
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Subaru/source/repos/Forest_Rangers/Forest_Rangers/Views/Comments/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Views\Comments\Edit.cshtml
+build_metadata.AdditionalFiles.GeneratedOutputFullPath = C:\Users\Subaru\source\repos\Forest_Rangers\Forest_Rangers\obj\Debug\net6.0\Razor\Views\Comments\Edit.cshtml.g.cs
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Subaru/source/repos/Forest_Rangers/Forest_Rangers/Views/Comments/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Views\Comments\Index.cshtml
+build_metadata.AdditionalFiles.GeneratedOutputFullPath = C:\Users\Subaru\source\repos\Forest_Rangers\Forest_Rangers\obj\Debug\net6.0\Razor\Views\Comments\Index.cshtml.g.cs
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Subaru/source/repos/Forest_Rangers/Forest_Rangers/Views/Home/Forbidden.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Views\Home\Forbidden.cshtml
+build_metadata.AdditionalFiles.GeneratedOutputFullPath = C:\Users\Subaru\source\repos\Forest_Rangers\Forest_Rangers\obj\Debug\net6.0\Razor\Views\Home\Forbidden.cshtml.g.cs
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Subaru/source/repos/Forest_Rangers/Forest_Rangers/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Views\Home\Index.cshtml
+build_metadata.AdditionalFiles.GeneratedOutputFullPath = C:\Users\Subaru\source\repos\Forest_Rangers\Forest_Rangers\obj\Debug\net6.0\Razor\Views\Home\Index.cshtml.g.cs
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Subaru/source/repos/Forest_Rangers/Forest_Rangers/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Views\Home\Privacy.cshtml
+build_metadata.AdditionalFiles.GeneratedOutputFullPath = C:\Users\Subaru\source\repos\Forest_Rangers\Forest_Rangers\obj\Debug\net6.0\Razor\Views\Home\Privacy.cshtml.g.cs
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Subaru/source/repos/Forest_Rangers/Forest_Rangers/Views/Posts/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Views\Posts\Create.cshtml
+build_metadata.AdditionalFiles.GeneratedOutputFullPath = C:\Users\Subaru\source\repos\Forest_Rangers\Forest_Rangers\obj\Debug\net6.0\Razor\Views\Posts\Create.cshtml.g.cs
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Subaru/source/repos/Forest_Rangers/Forest_Rangers/Views/Posts/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Views\Posts\Delete.cshtml
+build_metadata.AdditionalFiles.GeneratedOutputFullPath = C:\Users\Subaru\source\repos\Forest_Rangers\Forest_Rangers\obj\Debug\net6.0\Razor\Views\Posts\Delete.cshtml.g.cs
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Subaru/source/repos/Forest_Rangers/Forest_Rangers/Views/Posts/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Views\Posts\Details.cshtml
+build_metadata.AdditionalFiles.GeneratedOutputFullPath = C:\Users\Subaru\source\repos\Forest_Rangers\Forest_Rangers\obj\Debug\net6.0\Razor\Views\Posts\Details.cshtml.g.cs
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Subaru/source/repos/Forest_Rangers/Forest_Rangers/Views/Posts/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Views\Posts\Edit.cshtml
+build_metadata.AdditionalFiles.GeneratedOutputFullPath = C:\Users\Subaru\source\repos\Forest_Rangers\Forest_Rangers\obj\Debug\net6.0\Razor\Views\Posts\Edit.cshtml.g.cs
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Subaru/source/repos/Forest_Rangers/Forest_Rangers/Views/Posts/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Views\Posts\Index.cshtml
+build_metadata.AdditionalFiles.GeneratedOutputFullPath = C:\Users\Subaru\source\repos\Forest_Rangers\Forest_Rangers\obj\Debug\net6.0\Razor\Views\Posts\Index.cshtml.g.cs
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Subaru/source/repos/Forest_Rangers/Forest_Rangers/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Views\Shared\Error.cshtml
+build_metadata.AdditionalFiles.GeneratedOutputFullPath = C:\Users\Subaru\source\repos\Forest_Rangers\Forest_Rangers\obj\Debug\net6.0\Razor\Views\Shared\Error.cshtml.g.cs
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Subaru/source/repos/Forest_Rangers/Forest_Rangers/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Views\Shared\_Layout.cshtml
+build_metadata.AdditionalFiles.GeneratedOutputFullPath = C:\Users\Subaru\source\repos\Forest_Rangers\Forest_Rangers\obj\Debug\net6.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Subaru/source/repos/Forest_Rangers/Forest_Rangers/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Views\Shared\_LoginPartial.cshtml
+build_metadata.AdditionalFiles.GeneratedOutputFullPath = C:\Users\Subaru\source\repos\Forest_Rangers\Forest_Rangers\obj\Debug\net6.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Subaru/source/repos/Forest_Rangers/Forest_Rangers/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Views\Shared\_ValidationScriptsPartial.cshtml
+build_metadata.AdditionalFiles.GeneratedOutputFullPath = C:\Users\Subaru\source\repos\Forest_Rangers\Forest_Rangers\obj\Debug\net6.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Subaru/source/repos/Forest_Rangers/Forest_Rangers/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Views\_ViewImports.cshtml
+build_metadata.AdditionalFiles.GeneratedOutputFullPath = C:\Users\Subaru\source\repos\Forest_Rangers\Forest_Rangers\obj\Debug\net6.0\Razor\Views\_ViewImports.cshtml.g.cs
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Subaru/source/repos/Forest_Rangers/Forest_Rangers/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Views\_ViewStart.cshtml
+build_metadata.AdditionalFiles.GeneratedOutputFullPath = C:\Users\Subaru\source\repos\Forest_Rangers\Forest_Rangers\obj\Debug\net6.0\Razor\Views\_ViewStart.cshtml.g.cs
+build_metadata.AdditionalFiles.CssScope =

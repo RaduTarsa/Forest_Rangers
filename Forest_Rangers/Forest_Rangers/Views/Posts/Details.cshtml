@@ -1,0 +1,184 @@
+﻿@model Forest_Rangers.Models.Post
+
+@using Forest_Rangers.Areas.Identity.Data
+@using Microsoft.AspNetCore.Identity
+
+@inject UserManager<Forest_RangersUser> UserManager
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@{
+    string CalculateRelativeTime(DateTime date)
+    {
+        TimeSpan ts = DateTime.Now - date;
+        if (ts.TotalMinutes < 1)//seconds ago
+            return "just now";
+        if (ts.TotalHours < 1)//min ago
+            return ts.TotalMinutes == 1 ? "1 Minute ago" : (int)ts.TotalMinutes + " Minutes ago";
+        if (ts.TotalDays < 1)//hours ago
+            return ts.TotalHours == 1 ? "1 Hour ago" : (int)ts.TotalHours + " Hours ago";
+        if (ts.TotalDays < 7)//days ago
+            return ts.TotalDays == 1 ? "1 Day ago" : (int)ts.TotalDays + " Days ago";
+        if (ts.TotalDays < 30.4368)//weeks ago
+            return (ts.TotalDays / 7) == 1 ? "1 Week ago" : (int)(ts.TotalDays / 7) + " Weeks ago";
+        if (ts.TotalDays < 365.242)//months ago
+            return (ts.TotalDays / 30.4368) == 1 ? "1 Month ago" : (int)(ts.TotalDays / 30.4368) + " Months ago";
+        //years ago
+        return (ts.TotalDays / 365.242) == 1 ? "1 Year ago" : (int)(ts.TotalDays / 365.242) + " Years ago";
+    }
+}
+
+<script src="@Url.Content("~/scripts/maps.js")"></script>
+
+<style>
+    .date {
+        font-size: 11px
+    }
+
+    .comment-text {
+        font-size: 12px
+    }
+
+    .fs-12 {
+        font-size: 12px
+    }
+
+    .shadow-none {
+        box-shadow: none
+    }
+
+    .name {
+        color: #007bff
+    }
+
+    .cursor:hover {
+        color: blue
+    }
+
+    .cursor {
+        cursor: pointer
+    }
+
+    .textarea {
+        resize: none
+    }
+</style>
+
+
+<h1>Details</h1>
+
+<div>
+    <hr />
+
+    <div class="row">
+        <div class="col-sm-4">
+        @if(Model.ImagePath != null)
+        {
+                <img class="card-img" src="@Url.Content(string.Format("~/PostImages/{0}.jpg", Model.Id))" alt="post-image">
+        }
+        else
+        {
+            <img class="card-img" src="@Url.Content("~/HelperImages/no-post.jpg")" alt="no-post-image">
+        }
+        </div>
+        <div class="col-sm-8">
+            <dl class="row">
+                <dt class="col-sm-3">
+                    @Html.DisplayFor(model => model.Title)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Description)
+                </dd>
+                <dt class="col-sm-3">
+                    Created at
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Created_at)
+                </dd>
+                <dt class="col-sm-3">
+                   Updated at
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Updated_at)
+                </dd>
+            </dl>
+            <a target="_blank"  href='@string.Format("https://www.google.com/maps/?q={0},{1}", Model.CoordinatesLat, Model.CoordinatesLong)' class="btn btn-success">Location</a>
+        </div>
+    </div>
+</div>
+<br />
+<div>
+    <a asp-action="Home" class="btn btn-outline-primary">Back to Home</a>
+    <a asp-action="Index" class="btn btn-outline-primary">Back to List</a>
+    @if (Convert.ToString(Model.Forest_RangersUser.Id) == Convert.ToString(ViewData["userId"]))
+    {
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-info">Edit</a>
+    }
+</div>
+
+<hr />
+<h4>Add a comment</h4>
+<div class="row">
+    <div class="col-md-6 card h-100">
+        <form asp-action="CommentsCreate" EncType="multipart/form-data" class="my-auto">
+            <div class="form-group" hidden>
+                <input name="PostId" for="PostId" class="form-control" value="@Model.Id"></input>
+            </div>
+            <div class="d-flex flex-row add-comment-section mt-4 mb-4">
+                <input runat="server" type="file" for="ImagePath" class="form-control" id="customFile" name="customFile" />
+                @*<span asp-validation-for="ImagePath" class="text-danger"></span>*@
+            </div>
+            <div class="d-flex flex-row add-comment-section mt-4 mb-4">
+                <input name="Message" for="Message" class="form-control mr-3" placeholder="Add comment" />
+                @*<span asp-validation-for="Message" class="text-danger"></span>*@
+                <button class="btn btn-primary" type="submit">Comment</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<hr />
+
+<div class="comment-bottom bg-white p-2 px-4">
+    @foreach (var item in ViewBag.comments)
+    {
+        <div class="container mt-5">
+            <div class="d-flex justify-content-center row">
+                <div class="col-md-8">
+                    <div class="d-flex flex-column comment-section shadow p-1">
+                        <div class="bg-white p-2">
+                            <div class="d-flex flex-row user-info">
+                                <img class="rounded-circle" src="https://i.imgur.com/qdiP4DB.jpg" width="40"> @*user image*@
+                                <div class="d-flex flex-column justify-content-start ml-2"><span class="d-block font-weight-bold name">@UserManager.FindByIdAsync(item.Forest_RangersUserId).Result.FirstName @UserManager.FindByIdAsync(item.Forest_RangersUserId).Result.LastName</span><span class="date text-black-50">Shared publicly - @CalculateRelativeTime(item.Created_at)</span></div>
+                            </div>
+                            <div class="mt-2">
+                                <p class="comment-text">@item.Message</p>
+                                @if (item.ImagePath != null && item.ImagePath.ToString() != "null-path")
+                                {
+                                    <img class="card-img" src="@Url.Content("~/CommentImages/"+item.Id+".jpg")" alt="comment-image" />
+                                }
+                            </div>
+                        </div>
+                        <div class="bg-white">
+                            <div class="d-flex flex-row fs-12">
+                                <div class="like cursor ml-1"><span>
+                                    @if (item.Forest_RangersUserId.ToString() == UserManager.GetUserAsync(User).Result.Id || UserManager.GetUserAsync(User).Result.Id == Model.Forest_RangersUserId.ToString())
+                                    {
+                                        <form asp-action="CommentDeleteConfirmed">
+                                            <input type="hidden" asp-for="Id" value="@item.Id" />
+                                            <input type="submit" value="Delete" class="btn btn-outline-danger" />
+                                        </form>
+                                    }
+                            </span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

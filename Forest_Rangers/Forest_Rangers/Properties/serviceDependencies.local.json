@@ -2,7 +2,11 @@
   "dependencies": {
     "mssql1": {
       "type": "mssql.local",
-      "connectionId": "ConnectionStrings:DefaultConnection"
+      "connectionId": "ApplicationDbContextConnection"
+    },
+    "mssql2": {
+      "type": "mssql.local",
+      "connectionId": "Forest_RangersContext"
     }
   }
 }

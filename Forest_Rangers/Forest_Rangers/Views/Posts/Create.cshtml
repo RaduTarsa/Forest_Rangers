@@ -1,0 +1,62 @@
+﻿@model Forest_Rangers.Models.Post
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="@Url.Content("~/scripts/maps.js")"></script>
+
+<div class="row">
+    <div class="col-md-3 justify-content-center align-self-center">
+        <a asp-action="Index" class="btn btn-outline-primary">Back to List</a>
+    </div>
+    <div class="col-md-6">
+        <h1 class="text-center">Create</h1>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+<hr />
+<div class="row">
+    <div class="col-md-6 card pt-2">
+        <form asp-action="Create" EncType="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImagePath" class="control-label">Image</label>
+                <input runat="server" type="file" asp-for="ImagePath" class="form-control" id="customFile" name="customFile" />
+                <span asp-validation-for="ImagePath" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CoordinatesLong" class="control-label"></label>
+                <input asp-for="CoordinatesLong" class="form-control" id="long" />
+                <span asp-validation-for="CoordinatesLong" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CoordinatesLat" class="control-label"></label>
+                <input asp-for="CoordinatesLat" class="form-control" id="lat" />
+                <span asp-validation-for="CoordinatesLat" class="text-danger"></span>
+            </div>
+            <div class="form-group d-flex justify-content-between">
+                <button name="gps-button" class="btn btn-info w-25" type="button" onclick="setGPSCoords()">GPS</button>
+                <input runat="server" type="submit" value="Create" class="btn btn-primary w-50" />
+            </div>
+        </form>
+    </div>
+    <div class="col-md-6" style="min-height: 400px;">
+        <div id="map" style="width:100%; height: 100%;"></div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
